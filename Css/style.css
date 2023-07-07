@@ -56,6 +56,19 @@ body {
     margin-top: 7px;
     text-align: center;
 }
+/*Css para login*/
+.bodyInicio {
+    background-image: url("../img/blur-hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+/*Css para login*/
 
 @media screen and (max-width:400px) {
     .menu, .principal, .derecha {
