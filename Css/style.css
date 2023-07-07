@@ -1,11 +1,64 @@
-html, body {
-    width: 100%;
-    height: 100%;
+* {
+    box-sizing: border-box;
 }
 
+.texto-justificado{
+    text-align: justify;
+    }
 body {
-    background-image: url("../img/blur-hospital.jpg");
+    background-image: url("../Img/blur-hospital.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+.cabecera {
+    text-align: center;
+    background-position: center center;
+    background-color: tomato;
+
+}
+
+.cuerpo {
+    overflow: auto;
+}
+
+.menu {
+    float: left;
+    width: 20%;
+    text-align: center;
+    background-color: aqua;
+}
+
+.menu a {
+   padding: 8px;
+   margin-top: 7px;
+   display: block; 
+}
+
+.principal {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+.derecha {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.pie {
+    background-color: khaki;
+    color: gray;
+    padding: 10px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+@media screen and (max-width:400px) {
+    .menu, .principal, .derecha {
+        width: 100%;
+    }
 }
