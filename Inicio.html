@@ -4,18 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Micro red Perené</title>
-   <link rel="stylesheet" href="./css/style.css">
+ <style>
+* {
+    box-sizing: border-box;
+}
+
+.texto-justificado{
+    text-align: justify;
+    }
+body {
+    background-image: url("Paciente/Img/blur-hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.cabecera {
+    text-align: center;
+    background-position: center center;
+    background-color: tomato;
+}
+
+.cuerpo {
+    overflow: auto;
+}
+
+.menu {
+    float: left;
+    width: 20%;
+    text-align: center;
+    background-color: aqua;
+}
+
+.menu a {
+   padding: 8px;
+   margin-top: 7px;
+   display: block; 
+}
+
+.principal {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+.derecha {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.pie {
+    background-color: khaki;
+    color: gray;
+    padding: 10px;
+    margin-top: 7px;
+    text-align: center;
+}
+/*Css para login*/
+.bodyInicio {
+    background-image: url("Paciente/img/blur-hospital.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+/*Css para login*/
+
+/*Para boton de opciones*/
+article {
+    /* background-color: aquamarine; */
+   
+    background-size: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 3px;
+    flex: 20px;
+    
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:400px) {
+    .menu, .principal, .derecha {
+        width: 100%;
+    }
+}
+ </style>
  
 </head>
 <body>
-    <div class="cabecera">
+ <div class="cabecera">
       <picture>
         <img
         sizes="(max-width: 720px) 100vw, 720px"
         srcset="
-        ./img/TituloPerene_rqhokq_c_scale,w_200.png 200w,
-        ./img/TituloPerene_rqhokq_c_scale,w_720.png 720w"
-        src="./img/TituloPerene_rqhokq_c_scale,w_720.png"
+        Paciente/img/TituloPerene_rqhokq_c_scale,w_200.png 200w,
+      Paciente/img/TituloPerene_rqhokq_c_scale,w_720.png 720w"
+        src="Paciente/img/TituloPerene_rqhokq_c_scale,w_720.png"
         alt="">
         </picture>
 
@@ -25,7 +118,8 @@
           <a href="Inicio.html">Inicio</a>
           <a href="Nosotros.html">Nosotros</a>
           <a href="Historia.html">Historia</a>
-          <a href="login.html">Solicitar Cita</a>
+          <a href="Paciente/login.html">Solicitar Cita</a>
+		   <a href="ADMIN/login.html">Intranet</a>
         </div>
         <div class="principal">
             <h2>Contamos con los siguientes Servicios: </h2>
@@ -63,13 +157,13 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./img/perene1.jpg" class="d-block w-100" alt="...">
+                <img src="Paciente/img/perene1.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./img/perene2.jpg" class="d-block w-100" alt="...">
+                <img src="Paciente/img/perene2.jpg" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./img/perene3.jpg" class="d-block w-100" alt="...">
+                <img src="Paciente/img/perene3.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
