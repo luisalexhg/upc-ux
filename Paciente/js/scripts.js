@@ -91,3 +91,12 @@ nextMonthButton.addEventListener('click', function() {
 // Inicializar el calendario
 updateCalendar();
 
+function toggleButton(button) {
+  const buttons = document.getElementsByClassName('month-button');
+  
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
+  
+  button.classList.add('active');
+}
