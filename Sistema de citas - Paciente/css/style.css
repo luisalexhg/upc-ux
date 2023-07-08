@@ -3,9 +3,54 @@ html, body {
     height: 100%;
 }
 
-body {
+.bodyInicio {
     background-image: url("../img/blur-hospital.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
 }
+
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;
+  }
+  
+  .weekdays div {
+    width: calc(100% / 7);
+    text-align: center;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .days button {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  
+
+
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Citas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="month">
+          <button id="prev-month">&lt;</button>
+          <h2 id="month-year"></h2>
+          <button id="next-month">&gt;</button>
+        </div>
+        <div class="weekdays">
+          <div>Domingo</div>
+          <div>Lunes</div>
+          <div>Martes</div>
+          <div>Miércoles</div>
+          <div>Jueves</div>
+          <div>Viernes</div>
+          <div>Sábado</div>
+        </div>
+        <div class="days" id="calendar-days">
+        </div>
+      </div>
+      
+      <script>
+        // Obtener referencias a los elementos del calendario
+        const monthYearElement = document.getElementById('month-year');
+        const daysContainer = document.getElementById('calendar-days');
+        const prevMonthButton = document.getElementById('prev-month');
+        const nextMonthButton = document.getElementById('next-month');
+      
+        // Obtener la fecha actual
+        const currentDate = new Date();
+      
+        // Variables para el mes y el año actual
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+      
+        // Definir los nombres de los meses
+        const monthNames = [
+          'Enero',
+          'Febrero',
+          'Marzo',
+          'Abril',
+          'Mayo',
+          'Junio',
+          'Julio',
+          'Agosto',
+          'Septiembre',
+          'Octubre',
+          'Noviembre',
+          'Diciembre'
+        ];
+      
+        // Actualizar el calendario
+        function updateCalendar() {
+          // Limpiar los días anteriores
+          daysContainer.innerHTML = '';
+      
+          // Mostrar el mes y el año actual en el calendario
+          monthYearElement.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+      
+          // Obtener el primer día del mes actual
+          const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+      
+          // Obtener el número de días en el mes actual
+          const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+      
+          // Generar los elementos HTML para los días del mes
+          for (let day = 1; day <= daysInMonth; day++) {
+            const dayElement = document.createElement('button');
+            dayElement.textContent = day;
+            daysContainer.appendChild(dayElement);
+          }
+        }
+      
+        // Cambiar al mes anterior
+        prevMonthButton.addEventListener('click', function() {
+          currentMonth--;
+          if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+          }
+          updateCalendar();
+        });
+      
+        // Cambiar al mes siguiente
+        nextMonthButton.addEventListener('click', function() {
+          currentMonth++;
+          if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+          }
+          updateCalendar();
+        });
+      
+        // Inicializar el calendario
+        updateCalendar();
+      </script>
+       
+</body>
+</html>
