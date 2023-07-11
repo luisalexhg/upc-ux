@@ -14,8 +14,28 @@ body {
   background-color: #fff
 }
 
+[class*=hover-] {
+    transition: all .2s ease-in-out;
+}
+
 a{
+  text-decoration: none;
   color:#f45e02;
+  transition: all .2s;
+}
+
+a:hover{
+  color:#dc5400;
+  font-weight: 600;
+}
+
+a h6{
+  color:#000
+}
+
+.hover-box-shadow:hover{
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .09);
+  transform: translateY(-0.5rem);
 }
 
 .bodyInicio {
@@ -202,7 +222,7 @@ button.close {
 .btn-secondary{
   background-color:#3bac6a;
   border-color:#3bac6a;
-  transition: .6s;
+  transition: all .6s;
 }
 .btn-secondary:hover{
   background-color:#32965c;
@@ -225,3 +245,7 @@ button.close {
 .fs-18{font-size: 18px}
 
   
+/*MENU*/
+.icon-service{
+  width:100px;
+}
