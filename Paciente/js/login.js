@@ -1,17 +1,29 @@
+const loginForm = document.querySelector('#login-form');
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = loginForm['email'].value;
+  const password = loginForm['password'].value;
+
+  if(email.length < 1) showAlert('¡Alerta!','Ingresa tu correo electrónico','warning');
+  else if(password.length < 1) showAlert('¡Alerta!','Ingresa la contraseña','warning');
+  else window.location.href = "menu.html";
+});
+
 const showforgotPasswordModal = () =>{
 	$("#passwordPopup").modal("show");
 }
 
 const emailSend = () =>{
 	$("#passwordPopup").modal("hide");
-	showAlert('El enlace fue enviado a tu correo','success');
+	showAlert('¡Listo!','El enlace fue enviado a tu correo','success');
 }
 
-const showAlert = (text,type) => {
+const showAlert = (title,text,type) => {
 
 	Swal.fire({
 	  icon: type,
-	  title: '¡Listo!',
+	  title: title,
 	  text: text,
 	  showConfirmButton: false,
 	  timer: 2000
