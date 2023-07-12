@@ -5,43 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Paciente</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
-<body class="bodyInicio">
-    <div class="text-center" style="padding: 30px; padding-top: 2cm;">
-        <img src="img/logoPerene.png" class="img-fluid" alt="logoPerene">
-    </div>
-    <div class="container"
-        style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50vh;">
-        <form>
-            <div class="form-floating mb-3" style="width: 300px;">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">DNI / CE</label>
+<body>
+
+    <section class="bodyInicio">
+
+        <div class="container">
+
+            <div class="d-flex flex-column align-items-center justify-content-center pt-5">
+
+
+                <div class="text-center p-5">
+                    <img src="img/logoPerene.png" class="img-fluid logo" alt="Logo Perené">
+                </div>
+
+                <div class="card shadow p-5">
+                        
+                    <form id="login-form">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="floatingInput">Correo electrónico</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+
+                        <p onclick="showforgotPasswordModal()" class="text-right fs-13 cursor-pointer">¿Olvidaste tu contraseña?</p>
+
+                        <div class="g-recaptcha" data-sitekey="6LdVmhInAAAAAPj2z7JFym3zbE-7eOtt-3uUwTjA"></div>
+                        <!--6LdVmhInAAAAAAsOyZBQbtkkQufmw1B9WCQCT1rx-->
+
+                            
+                        <button type="submit" class="btn btn-secondary btn-block fs-15 fw-600 full-width mt-2 mb-2">Iniciar sesión</button>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label fs-13" for="remember">Mantenerme la sesión abierta</label>
+                        </div>
+                        
+                        <div class="text-center mt-3">
+                            <a href="#" class="fs-14">¿No tienes una cuenta? Regístrate</a>
+                        </div>
+                    </form>
+                    
+                </div>
+
+                <p class="text-center mt-4 cursor-pointer fs-14" onclick='$("#termsModal").modal("show");'>Al continuar estás aceptando nuestros términos y condiciones</p>
+
             </div>
-            <div class="form-floating" style="width: 300px;">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Contraseña</label>
-            </div>
-            <br>
-            <div class="mb-3 form-check" style="background-color:whitesmoke">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Mantenerme conectado en este equipo</label>
-            </div>
-            <button onclick="window.location.href='./Menu.html'" type="button" class="btn btn-secondary btn-lg" style="width: 300px">INGRESAR</button>
             
-            <div style="text-align: center;">
-                <p>
-                    <br>
-                    <a href="..." class="link-dark">Olvidé mi contraseña</a>
-                </p>
-                <p>
-                    <a href="..." class="link-dark">Registrarme</a>
-                </p>
+        </div>
+        
+    </section>
+
+    <div class="modal fade" id="passwordPopup" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center border-0">
+              <div class="w-100 pt-4">
+                <h5 class="h3">Restablecer contraseña</h5>
+                <div>Te enviaremos un enlace para restablecer tu contraseña</div>
+              </div>
+              <button onclick='$("#passwordPopup").modal("hide");' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <img src="img/icon-x.svg" alt="Icon">
+                </span>
+              </button>
             </div>
-        </form>
+            <div class="modal-body px-md-4 px-lg-5 pb-4 pb-lg-5">
+              <div>
+                <div class="form-group">
+                  <input type="email"id="email" class="form-control" placeholder="Correo electrónico" required="">
+                </div>
+                <button onclick="emailSend()" class="btn btn-secondary btn-block fs-15 fw-600 full-width mt-2 mb-2">Restablecer contraseña</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
+
+    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center border-0">
+              <div class="w-100 pt-4">
+                <h5 class="h3">Términos y condiciones </h5>
+              </div>
+              <button onclick='$("#termsModal").modal("hide");' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <img src="img/icon-x.svg" alt="Icon">
+                </span>
+              </button>
+            </div>
+            <div class="modal-body px-md-4 px-lg-5 pb-4 pb-lg-5">
+                <p>Bienvenido/a a nuestro sitio web. Antes de utilizar nuestros servicios, te pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder y utilizar nuestro sitio web, aceptas cumplir con estos términos y condiciones, así como con todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, te recomendamos que no utilices nuestro sitio.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
 </body>
+
+<script type="text/javascript" src="js/login.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
