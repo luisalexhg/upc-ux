@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div>
+    <h1 style="text-align: center; color: #47525E; margin-top: 55px; margin-bottom: 30px;">Visualizar disponibilidad</h1>
+  </div>
+  <div class="calendar">
+    <div class="month">
+      <button id="prev-month" class="close">
+        <img src="img/back-arrow.svg" width="18">
+      </button>
+      <h2 id="month-year"></h2>
+      <button id="next-month" class="close">
+        <img src="img/forward-arrow.svg" width="18">
+      </button>
+    </div>
+    <div class="weekdays">
+      <div> D </div>
+      <div> L </div>
+      <div> M </div>
+      <div> M </div>
+      <div> J </div>
+      <div> V </div>
+      <div> S </div>
+    </div>
+    <div class="days" id="calendar-days"></div>
+  </div>
+  <div>
+  </div>
+   
+  <script src="js/Calendario.js"></script>    
+</body>
+</html>
