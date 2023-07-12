@@ -61,18 +61,278 @@ body {
     text-align: center;
 
 }
-.pie {
-    
-    color: gray;
-    padding: 10px;
-    margin-top: 7px;
-}
+.selectorIcon {
+        width: 128px;
+        height: 128px;
+      }
+
+.selectorBotón {
+        background-color: #47525E;
+        border-radius: 5px;
+        width: 200px;
+        height: 130px;
+      }
+.txtbtn {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 46px;
+    line-height: 62px;
+    width: 619px;
+    text-align: center;
+    }
 
 @media screen and (max-width:400px) {
     .menu, .principal, .derecha {
         width: 100%;
     }
 }
+
+body {
+    margin: 0;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #555a64;
+    text-align: left;
+    background-color: #fff
+  }
+  
+  [class*=hover-] {
+      transition: all .2s ease-in-out;
+  }
+  
+  a{
+    text-decoration: none;
+    color:#f45e02;
+    transition: all .2s;
+  }
+  
+  a:hover{
+    color:#dc5400;
+    font-weight: 600;
+  }
+  
+  a h6{
+    color:#000
+  }
+  
+  .hover-box-shadow:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .09);
+    transform: translateY(-0.5rem);
+  }
+  
+  .bodyInicio {
+      background-image: url("../img/blur-hospital.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100vh;
+  }
+  
+  .logo {
+    width: 360px;
+  }
+  
+  .border-img{
+    border-radius: 10px;
+  }
+  
+  .full-width{
+    width: 100%;
+  }
+  
+  .shadow{
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) !important;
+  }
+  
+  .calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #b0b9c5;
+  }
+  
+  .month {
+    display: flex;
+    background-color: #1f56a6;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 5px;  
+    margin-bottom: 10px;
+    
+  }
+  
+  .weekdays div {
+    width: calc(100% / 7);
+    text-align: center;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .days button {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    transition: transform 0.2s;
+  }
+  
+  .days button.selected {
+    transform: scale(0.90);
+    background-color: #1f56a6; 
+    color: white;
+  }
+  
+  .cardCalendar {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    background: url('../img/despertador.png') no-repeat left bottom;
+    background-size: 30px;
+    background-position: 10px;
+    border-radius: 20px;
+    border: 3px solid #b0b9c5;
+  }
+  
+  .button-row-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+  }
+  
+  .button-row {
+    display: inline-flex;
+  }
+  
+  .month-button {
+    width: 2cm;
+    height: 2cm;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #969FAA;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.2s;
+  }
+  
+  .month-button.active {
+    transform: scale(0.9);
+    background-color: #1f56a6;
+  }
+  
+  .cardHistorial {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;  
+    border-radius: 20px;
+    border: 3px solid #b0b9c5;
+  }
+  
+  .round-button {
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f56a6;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .round-button:active {
+    transform: scale(0.9);
+  }
+  
+  .arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(45deg);  
+  }
+  
+  .info-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+  
+  .square-button {
+    width: 3cm;
+    height: 3cm;
+    border-radius: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .square-button:active {
+    transform: scale(0.95);
+  }
+  
+  /*CUSTOM*/
+  button.close {
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  
+  .cursor-pointer{ cursor: pointer!important;}
+  
+  .btn-secondary{
+    background-color:#3bac6a;
+    border-color:#3bac6a;
+    transition: all .6s;
+  }
+  .btn-secondary:hover{
+    background-color:#32965c;
+    border-color:#32965c;
+  }
+  
+  .text-left{text-align: left;}
+  .text-right{text-align: right;}
+  .text-center{text-align: center;}
+    
+  .fw-500{font-weight: 500}
+  .fw-600{font-weight: 600}
+  .fw-700{font-weight: 700}
+  
+    
+  .fs-13{font-size: 13px}
+  .fs-14{font-size: 14px}
+  .fs-15{font-size: 15px}
+  .fs-16{font-size: 16px}
+  .fs-18{font-size: 18px}
+  
+    
+  /*MENU*/
+  .icon-service{
+    width:100px;
+  }
 
 
 
