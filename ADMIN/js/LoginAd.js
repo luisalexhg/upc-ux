@@ -26,6 +26,6 @@ const showAlert = (title,text,type) => {
 	  title: title,
 	  text: text,
 	  showConfirmButton: false,
-	  timer: 2000
+	  timer: 200
 	})
 }
