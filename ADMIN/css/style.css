@@ -73,14 +73,7 @@ body {
         width: 200px;
         height: 130px;
       }
-.txtbtn {
-    color: #FFFFFF;
-    font-family: Lato;
-    font-size: 46px;
-    line-height: 62px;
-    width: 619px;
-    text-align: center;
-    }
+
 
 @media screen and (max-width:400px) {
     .menu, .principal, .derecha {
@@ -114,8 +107,17 @@ body {
     font-weight: 600;
   }
   
-  th {
+  .disponible{
     background-color:rgb(65, 228, 0);
+    color: black;
+  }
+  .mitadDisponible{
+    background-color:rgb(255, 255, 5);
+    color: black;
+  }
+  .indisponible{
+    background-color:rgb(255, 0, 0);
+    color: black;
   }
   
   .hover-box-shadow:hover{
