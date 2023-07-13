@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/themify-icons.css">
+</head>
+<body>
+    <section data-spy="scroll" data-offset="0" ata-target="#divRegistrar" class="contact-form-section padding-top-bottom bgBook" id="divRegistrar">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-4 "></div>
+              <div class="col-lg-4 ">
+                 <div class="company-contact-form wow fadeInRight" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
+                    
+                    <h2 class="text-color-white font-weight-600 fontface-one padding-bottom-45">Regístrate</h2>
+                    <form class="contact-form-outer" id="formRegistrarUsuario" name="formRegistrar">
+                       <div class="row">
+                          <div class="input-group mb-3">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-email"></span></span>
+                             </div>
+                             <input required="" type="email" maxlength="250" class="form-control" placeholder="Ingrese Correo Electrónico" id="txtEmail" aria-label="Email" aria-describedby="basic-addon1">
+                          </div>
+                         
+                          <div class="input-group mb-3">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-flag-alt-2"></span></span>
+                             </div>
+                             <select required="" class="form-control" onchange="getval()" id="txtTipoDocumento">
+                                <option value="" disabled="" selected="">Seleccione Tipo de Documento</option>
+                                <option value="1">DNI - Documento Nacional de Identidad</option>
+                                <option value="3">Carné de Extranjería (Residente en Perú)</option>
+
+                              </select>                           
+                          </div>
+                          <div class="input-group mb-3" id="divDNI" style="display: inherit;">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                             </div>
+                             <input type="text" maxlength="8" class="form-control" id="txtDNI" placeholder="Ingrese DNI" aria-label="DNI" aria-describedby="basic-addon1" required="">
+                          </div>
+                          <div class="input-group mb-3" id="divCE" style="display: none;">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                             </div>
+                             <input type="text" maxlength="9" class="form-control" id="txtCE" placeholder="Ingrese Carné de Extranjería" aria-label="CE" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="input-group mb-3" id="divNombre" style="display: none;">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                             </div>
+                             <input type="text" maxlength="20" class="form-control" id="txtNombre" placeholder="Ingrese Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="input-group mb-3" id="divApePaterno" style="display: none;">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                             </div>
+                             <input type="text" maxlength="20" class="form-control" id="txtApePaterno" placeholder="Ingrese Apellido Paterno" aria-label="ApePaterno" aria-describedby="basic-addon1">
+                          </div>
+                          <div class="input-group mb-3" id="divApeMaterno" style="display: none;">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                             </div>
+                             <input type="text" maxlength="20" class="form-control" id="txtApeMaterno" placeholder="Ingrese Apellido Materno" aria-label="ApeMaterno" aria-describedby="basic-addon1">
+                          </div>
+                          <span class="text-color-white">Ingrese Fecha de Nacimiento: </span>
+                          <div class="input-group mb-3">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-user"></span></span>
+                             </div>                            
+                            
+                              <input required="" maxlength="50" type="date" class="form-control" id="txtFechaNacimiento" placeholder="Ingrese Fecha de Nacimiento" aria-label="DateNacimiento" aria-describedby="basic-addon1">
+
+                          </div>  
+                          <div class="input-group mb-3">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-lock"></span></span>
+                             </div>
+                             <input required="" maxlength="50" type="password" class="form-control" id="txtPassword" placeholder="Ingrese Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                          </div>    
+                          <div class="input-group mb-3">
+                             <div class="input-group-prepend">
+                               <span class="input-group-text" id="basic-addon1"><span class="ti-lock"></span></span>
+                             </div>
+                             <input required="" maxlength="50" type="password" class="form-control" id="txtPassword2" placeholder="Verifique su Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+                          </div>        
+                          <div class="col-md-12">
+                             <button type="submit" class="btn button-setting button-setting-primary text-color-white width-100 text-center" style="background: #853337;">Registrarme</button>
+                          </div>                          
+                       </div>
+                    </form>
+                 </div>
+              </div>          
+           </div>          
+        </div>
+     </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
