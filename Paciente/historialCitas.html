@@ -12,49 +12,59 @@
     <div>
         <h1 style="text-align: center; color: #47525E; margin-top: 55px; margin-bottom: 30px;">Historial de citas</h1>
     </div>
+    <div class="button-row-container" style="display: flex; justify-content: center;">
+        <div class="button-row">
+            <button class="year-button" onclick="toggleButtonYear(this)">2022</button>
+            <button class="year-button" onclick="toggleButtonYear(this)">2023</button>
+            <button class="year-button" onclick="toggleButtonYear(this)">2024</button>
+        </div>
+    </div>    
     <div class="button-row-container">
         <div class="button-row">
-            <button class="month-button" onclick="toggleButton(this)">Ene</button>
-            <button class="month-button" onclick="toggleButton(this)">Feb</button>
-            <button class="month-button" onclick="toggleButton(this)">Mar</button>
-            <button class="month-button" onclick="toggleButton(this)">Abr</button>
-            <button class="month-button" onclick="toggleButton(this)">May</button>
-            <button class="month-button" onclick="toggleButton(this)">Jun</button>
-            <button class="month-button" onclick="toggleButton(this)">Jul</button>
-            <button class="month-button" onclick="toggleButton(this)">Ago</button>
-            <button class="month-button" onclick="toggleButton(this)">Sep</button>
-            <button class="month-button" onclick="toggleButton(this)">Oct</button>
-            <button class="month-button" onclick="toggleButton(this)">Nov</button>
-            <button class="month-button" onclick="toggleButton(this)">Dic</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Ene</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Feb</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Mar</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Abr</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">May</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Jun</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Jul</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Ago</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Sep</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Oct</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Nov</button>
+            <button class="month-button" onclick="toggleButtonMonth(this)">Dic</button>
         </div>
     </div>
     <div class="cardHistorial">
         <div class="card-body" style="margin-left: 15px; position: relative;">
             <h6 style="color: #47525E;">Odontología</h6>
-            <h3>02/06/2023</h3>
-            <button class="round-button" >
-              <span class="arrow"></span>
-            </button>
+            <h3 style="display: inline-block; margin-right: 10px;">02/06/2023</h3>
+            <a href="#" class="round-button" style="float: right;">
+                <img src="./img/boton-derecha-verde.png" alt="Flecha-siguiente" class="button-img" />
+            </a>
         </div>
     </div>
+    
     <div class="cardHistorial">
         <div class="card-body" style="margin-left: 15px; position: relative;">
             <h6 style="color: #47525E;">Medicina General</h6>
-            <h3>15/06/2023</h3>
-            <button class="round-button" >
-              <span class="arrow"></span>
-            </button>
+            <h3 style="display: inline-block; margin-right: 10px;">15/06/2023</h3>
+            <a href="#" class="round-button" style="float: right;">
+                <img src="./img/boton-derecha-verde.png" alt="Flecha-siguiente" class="button-img" />
+            </a>
         </div>
     </div>
     <div class="cardHistorial">
         <div class="card-body" style="margin-left: 15px; position: relative;">
             <h6 style="color: #47525E;">Laboratorio</h6>
-            <h3>16/06/2023</h3>
-            <button class="round-button" >
-              <span class="arrow"></span>
-            </button>
+            <h3 style="display: inline-block; margin-right: 10px;">16/06/2023</h3>
+            <a href="#" class="round-button" style="float: right;">
+                <img src="./img/boton-derecha-verde.png" alt="Flecha-siguiente" class="button-img" />
+            </a>
         </div>
-    </div>              
+    </div> 
+             
     <script src="js/scripts.js"></script>
+
 </body>
 </html>
