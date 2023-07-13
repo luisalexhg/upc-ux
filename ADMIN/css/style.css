@@ -55,12 +55,13 @@ body {
 }
 
 .derechabaja {
-    float:right;
-    width: 10%;
-    padding: 8px;
-    text-align: center;
+  float:right;
+  width: 10%;
+  padding: 8px;
+  text-align: center;
 
 }
+
 .selectorIcon {
         width: 128px;
         height: 128px;
@@ -113,8 +114,8 @@ body {
     font-weight: 600;
   }
   
-  a h6{
-    color:#000
+  th {
+    background-color:rgb(65, 228, 0);
   }
   
   .hover-box-shadow:hover{
@@ -328,6 +329,8 @@ body {
   .fs-16{font-size: 16px}
   .fs-18{font-size: 18px}
   
+
+
     
   /*MENU*/
   .icon-service{
