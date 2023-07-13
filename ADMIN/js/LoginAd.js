@@ -29,3 +29,4 @@ const showAlert = (title,text,type) => {
 	  timer: 200
 	})
 }
+
