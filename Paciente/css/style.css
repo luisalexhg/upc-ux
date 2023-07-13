@@ -147,19 +147,38 @@ a h6{
   color: white;
   font-size: 16px;
   transition: transform 0.2s;
-}
+  }
 
 .month-button.active {
   transform: scale(0.9);
-  background-color: #1f56a6;
+  background-color: #3bac6a;
 }
+
+.year-button {
+  width: 3cm;
+  height: 1cm;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #969FAA;
+  color: white;
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+.year-button.active {
+  transform: scale(0.9);
+  background-color: #3bac6a;
+}
+
 
 .cardHistorial {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 20px;  
   border-radius: 20px;
-  border: 3px solid #b0b9c5;
+  border: 3px solid #eea276;
+  background-color: #fff2ea;
 }
 
 .round-button {
@@ -169,7 +188,6 @@ a h6{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #1f56a6;
   border: none;
   cursor: pointer;
   transition: transform 0.2s;
@@ -248,4 +266,15 @@ button.close {
 /*MENU*/
 .icon-service{
   width:100px;
+}
+
+.button-link {
+  display: inline-block;
+}
+
+.button-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  /* Agrega aquí cualquier otro estilo que desees para el botón */
 }
