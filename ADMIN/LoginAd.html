@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrador</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+    <section class="bodyInicio">
+
+        <div class="container">
+
+            <div class="d-flex flex-column align-items-center justify-content-center pt-5">
+
+
+                <div class="text-center p-5">
+                    <img src="img/logoPerene.png" class="img-fluid logo" alt="Logo Perené">
+                </div>
+
+                <div class="card shadow p-5">
+                        
+                    <form id="login-form">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                            <label for="floatingInput">Código de Usuario</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            <label for="floatingPassword">Contraseña</label>
+                        </div>
+
+                        <p onclick="showforgotPasswordModal1()" class="text-right fs-13 cursor-pointer">¿Olvidaste tu contraseña?</p>
+
+                        <div class="g-recaptcha" data-sitekey="6LdVmhInAAAAAPj2z7JFym3zbE-7eOtt-3uUwTjA"></div>
+                        <!--6LdVmhInAAAAAAsOyZBQbtkkQufmw1B9WCQCT1rx-->
+
+                            
+                        <button type="submit" class="btn btn-secondary btn-block fs-15 fw-600 full-width mt-2 mb-2">
+                          <a href="Módulo Menú.html">Iniciar sesión </a></button>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label fs-13" for="remember">Mantenerme la sesión abierta</label>
+                        </div>
+                    
+                    </form>
+                    
+                </div>
+
+            
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <div class="modal fade" id="passwordPopup" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center border-0">
+              <div class="w-100 pt-4">
+                <h5 class="h3">Restablecer contraseña</h5>
+                <div>Te enviaremos un enlace para restablecer tu contraseña</div>
+              </div>
+              <button onclick='$("#passwordPopup").modal("hide");' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <img src="img/icon-x.svg" alt="Icon">
+                </span>
+              </button>
+            </div>
+            <div class="modal-body px-md-4 px-lg-5 pb-4 pb-lg-5">
+              <div>
+                <div class="form-group">
+                  <input type="email"id="email" class="form-control" placeholder="Correo electrónico" required="">
+                </div>
+                <button onclick="emailSend()" class="btn btn-secondary btn-block fs-15 fw-600 full-width mt-2 mb-2">Restablecer contraseña</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-center border-0">
+              <div class="w-100 pt-4">
+                <h5 class="h3">Términos y condiciones </h5>
+              </div>
+              <button onclick='$("#termsModal").modal("hide");' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                  <img src="img/icon-x.svg" alt="Icon">
+                </span>
+              </button>
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/LoginAd.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
