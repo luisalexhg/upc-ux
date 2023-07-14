@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprogramación de citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div>
+    <h1 style="text-align: center; color: #47525E; margin-top: 55px; margin-bottom: 30px;"> Calendario de citas</h1>
+  </div>
+  <div class="calendar">
+    <div class="month">
+      <button id="prev-month" class="close">
+        <img src="img/back-arrow.svg" width="18">
+      </button>
+      <h2 id="month-year"></h2>
+      <button id="next-month" class="close">
+        <img src="img/forward-arrow.svg" width="18">
+      </button>
+    </div>
+    <div class="weekdays">
+      <div> D </div>
+      <div> L </div>
+      <div> M </div>
+      <div> M </div>
+      <div> J </div>
+      <div> V </div>
+      <div> S </div>
+    </div>
+    <div class="days" id="calendar-days"></div>
+   </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+ <!-- Button trigger modal -->
+  <div class="derechabaja">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Reprogramar Cita
+  </button>
+</div>
+  
+  <!-- Modal -->
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Reprogramar Cita</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+
+
+            <div class="input-group mb-3">
+                <!--<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                <span class="input-group-text" id="basic-addon1">DNI:</span>
+                <span class="input-group-text" id="basic-addon2">06245789</span>
+              </div>
+
+            <div class="input-group mb-3">
+                <!--<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                <span class="input-group-text" id="basic-addon1">Nombre de Paciente:</span>
+                <span class="input-group-text" id="basic-addon2">Estefano Almendras</span>
+              </div>
+
+              <label for="basic-url" class="form-label">Motivo de Reporgramación:</label>
+            <br>
+              <div class="input-group">
+                <span class="input-group-text">Ingresar motivo::</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+            <br>
+              <div class="input-group mb-3">
+                <!--<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                <span class="input-group-text" id="basic-addon1">Nombre de Doctor(a):</span>
+                <span class="input-group-text" id="basic-addon2">Katherine Durán</span>
+              </div>
+
+              <div class="input-group mb-3">
+                <!--<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">-->
+                <span class="input-group-text" id="basic-addon1">Especialidad:</span>
+                <span class="input-group-text" id="basic-addon2"> Medicina General</span>
+              </div>
+
+              <div class="input-group mb-2">
+                <span class="input-group-text" id="basic-addon1">Actualizar Fecha:</span>
+                <input type="text" class="form-control" placeholder="Ingrese Nombres" aria-label="Ingrese Nombres" aria-describedby="basic-addon1">
+              </div>
+              
+              
+             <div class="col order-last">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                    <option selected>Actualizar hora</option>
+                    <option value="1">09:00 AM</option>
+                    <option value="2">10:00 AM</option>
+                    <option value="3">11:00 AM</option>
+                    <option value="4">12:00 AM</option>
+                    <option value="5">13:00 PM</option>
+                    <option value="6">14:00 PM</option>
+                    <option value="7">15:00 PM</option>
+                    <option value="8">16:00 PM</option>
+                    <option value="9">17:00 PM</option>
+                    <option value="10">18:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+              
+              
+<br>
+<br>
+
+        
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+          <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel">Notificación:</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+                  ¡Se guardaron cambios exitosamente!
+                  <br>
+                  ¡Se notificará al paciente!
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Reprogramar</a>
+
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <div class="derecha">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Atras</button>
+    </div>
+     
+<script src="js/Calendario.js"></script>    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
