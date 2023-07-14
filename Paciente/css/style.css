@@ -73,7 +73,7 @@ a h6{
 
 .month {
   display: flex;
-  background-color: #1f56a6;
+  background-color: #3bac6a;
   color: white;
   padding: 10px;
   justify-content: space-between;
@@ -112,7 +112,7 @@ a h6{
 
 .days button.selected {
   transform: scale(0.90);
-  background-color: #1f56a6; 
+  background-color: #3bac6a; 
   color: white;
 }
 
@@ -207,11 +207,17 @@ a h6{
 }
 
 .info-box {
-  border: 1px solid #ccc;
+  border: 1px solid #eea276;
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 5px;
   margin-right: 15px;
+  pointer-events: none;  
+}
+
+.info-box p {
+  display: inline-block;
+  margin: 0;
 }
 
 .square-button {
