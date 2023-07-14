@@ -8,28 +8,32 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/themify-icons.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    
 </head>
 <body>
     <section data-spy="scroll" data-offset="0" ata-target="#divRegistrar" class="contact-form-section padding-top-bottom bgBook" id="divRegistrar">
         <div class="container">
-           <div class="row">
-              <div class="col-lg-4 "></div>
+           <div class="row">        
+              
               <div class="col-lg-4 ">
                  <div class="company-contact-form wow fadeInRight" data-wow-delay="300ms" style="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
                     
-                    <h2 class="text-color-white font-weight-600 fontface-one padding-bottom-45">Regístrate</h2>
+                  <div>
+                     <h1 style="text-align: center; color: #47525E; margin-top: 55px; margin-bottom: 30px;">Regístrate</h1>
+                 </div>
                     <form class="contact-form-outer" id="formRegistrarUsuario" name="formRegistrar">
                        <div class="row">
                           <div class="input-group mb-3">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-email"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-envelope"></i></span>
                              </div>
                              <input required="" type="email" maxlength="250" class="form-control" placeholder="Ingrese Correo Electrónico" id="txtEmail" aria-label="Email" aria-describedby="basic-addon1">
                           </div>
                          
                           <div class="input-group mb-3">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-flag-alt-2"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-flag"></i></span></span>
                              </div>
                              <select required="" class="form-control" onchange="getval()" id="txtTipoDocumento">
                                 <option value="" disabled="" selected="">Seleccione Tipo de Documento</option>
@@ -40,38 +44,32 @@
                           </div>
                           <div class="input-group mb-3" id="divDNI" style="display: inherit;">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-id-badge"></i></span></span>
                              </div>
-                             <input type="text" maxlength="8" class="form-control" id="txtDNI" placeholder="Ingrese DNI" aria-label="DNI" aria-describedby="basic-addon1" required="">
-                          </div>
-                          <div class="input-group mb-3" id="divCE" style="display: none;">
+                             <input type="text" maxlength="8" class="form-control" id="txtDNI" placeholder="Ingrese DNI / CE" aria-label="DNI" aria-describedby="basic-addon1" required="">
+                          </div>                          
+                          <div class="input-group mb-3" id="divNombre" style="display: inherit;">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-user"></i></i></span></span>
                              </div>
-                             <input type="text" maxlength="9" class="form-control" id="txtCE" placeholder="Ingrese Carné de Extranjería" aria-label="CE" aria-describedby="basic-addon1">
+                             <input type="text" maxlength="20" class="form-control" id="txtNombre" placeholder="Ingrese Nombres" aria-label="Nombre" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3" id="divNombre" style="display: none;">
+                          <div class="input-group mb-3" id="divApePaterno" style="display: inherit;">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
-                             </div>
-                             <input type="text" maxlength="20" class="form-control" id="txtNombre" placeholder="Ingrese Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
-                          </div>
-                          <div class="input-group mb-3" id="divApePaterno" style="display: none;">
-                             <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-user"></i></i></span></span>
                              </div>
                              <input type="text" maxlength="20" class="form-control" id="txtApePaterno" placeholder="Ingrese Apellido Paterno" aria-label="ApePaterno" aria-describedby="basic-addon1">
                           </div>
-                          <div class="input-group mb-3" id="divApeMaterno" style="display: none;">
+                          <div class="input-group mb-3" id="divApeMaterno" style="display: inherit;">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-id-badge"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-user"></i></i></span></span>
                              </div>
                              <input type="text" maxlength="20" class="form-control" id="txtApeMaterno" placeholder="Ingrese Apellido Materno" aria-label="ApeMaterno" aria-describedby="basic-addon1">
                           </div>
                           <span class="text-color-white">Ingrese Fecha de Nacimiento: </span>
                           <div class="input-group mb-3">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-user"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-calendar"></i></span></span>
                              </div>                            
                             
                               <input required="" maxlength="50" type="date" class="form-control" id="txtFechaNacimiento" placeholder="Ingrese Fecha de Nacimiento" aria-label="DateNacimiento" aria-describedby="basic-addon1">
@@ -79,27 +77,54 @@
                           </div>  
                           <div class="input-group mb-3">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-lock"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-lock"></i></span></span>
                              </div>
                              <input required="" maxlength="50" type="password" class="form-control" id="txtPassword" placeholder="Ingrese Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
                           </div>    
                           <div class="input-group mb-3">
                              <div class="input-group-prepend">
-                               <span class="input-group-text" id="basic-addon1"><span class="ti-lock"></span></span>
+                               <span class="input-group-text" id="basic-addon1"><i class="fi fi-rs-lock"></i></span></span>
                              </div>
                              <input required="" maxlength="50" type="password" class="form-control" id="txtPassword2" placeholder="Verifique su Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
-                          </div>        
+                          </div>
+                          <div class="mb-3 form-check">
+                           <input type="checkbox" class="form-check-input" id="remember" aria-describedby="basic-addon1" required style="margin-left: 10px;">
+                           <label class="form-check-label cursor-pointer fs-14" onclick='$("#termsModal").modal("show");' for="remember" style="margin-left: 10px;">
+                              Aceptar términos y condiciones
+                           </label>
+                       </div>
+                               
                           <div class="col-md-12">
-                             <button type="submit" class="btn button-setting button-setting-primary text-color-white width-100 text-center" style="background: #853337;">Registrarme</button>
+                             <button type="submit" class="btn btn-secondary btn-block fs-15 fw-600 full-width mt-2 mb-2">Registrarme</button>
                           </div>                          
                        </div>
                     </form>
                  </div>
               </div>          
-           </div>          
-        </div>
+           </div>                     
+        </div>        
+        <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+             <div class="modal-header text-center border-0">
+               <div class="w-100 pt-4">
+                 <h5 class="h3">Términos y condiciones </h5>
+               </div>
+               <button onclick='$("#termsModal").modal("hide");' type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">
+                   <img src="img/icon-x.svg" alt="Icon">
+                 </span>
+               </button>
+             </div>
+             <div class="modal-body px-md-4 px-lg-5 pb-4 pb-lg-5">
+                 <p>Bienvenido/a a nuestro sitio web. Antes de utilizar nuestros servicios, te pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder y utilizar nuestro sitio web, aceptas cumplir con estos términos y condiciones, así como con todas las leyes y regulaciones aplicables. Si no estás de acuerdo con alguno de estos términos, te recomendamos que no utilices nuestro sitio.</p>
+             </div>
+           </div>
+         </div>
+     </div>
      </section>
 </body>
+<script type="text/javascript" src="js/login.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>

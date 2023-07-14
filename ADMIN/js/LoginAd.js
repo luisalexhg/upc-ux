@@ -7,7 +7,7 @@ loginForm.addEventListener('submit', (e) => {
 
   if(email.length < 1) showAlert('¡Alerta!','Ingresa tu código de usuario','warning');
   else if(password.length < 1) showAlert('¡Alerta!','Ingresa la contraseña','warning');
-  else window.location.href = "menu.html";
+  else window.location.href = "MenuAd.html";
 });
 
 const showforgotPasswordModal1 = () =>{
