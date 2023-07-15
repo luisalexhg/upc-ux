@@ -285,3 +285,7 @@ button.close {
   /* Agrega aquí cualquier otro estilo que desees para el botón */
 }
 
+.doctor-avatar{
+  border-radius: 10px;
+  max-width: 160px;
+}
