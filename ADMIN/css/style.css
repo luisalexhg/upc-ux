@@ -45,13 +45,41 @@ body {
     padding: 14px;
 }
 
+.btn-container {
+  text-align: center;
+  margin-top: 50px;
+  transform: translateY(-50%);
+}
+
+.btn-container .btn-Centro {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.btn-Centro {
+  display: inline-block;
+  padding: 10px;
+}
+
+.btn-atras {
+  background-color:#b0b9c5;
+  border-color: #ccc;
+  color: white;
+  transition: all .6s;
+}
+
+.btn-atras:hover{
+    background-color:#b0b9c5;
+    border-color:#ccc;
+}
+
 
 .derecha {
     float: left;
     width: 20%;
     padding: 10px;
     text-align: center;
-
+    
 }
 
 .derechabaja {
@@ -162,7 +190,7 @@ body {
   
   .month {
     display: flex;
-    background-color: #1f56a6;
+    background-color: #3bac6a;
     color: white;
     padding: 10px;
     justify-content: space-between;
@@ -201,7 +229,7 @@ body {
   
   .days button.selected {
     transform: scale(0.90);
-    background-color: #1f56a6; 
+    background-color: #3bac6a; 
     color: white;
   }
   
@@ -240,7 +268,7 @@ body {
   
   .month-button.active {
     transform: scale(0.9);
-    background-color: #1f56a6;
+    background-color: #3bac6a;
   }
   
   .cardHistorial {

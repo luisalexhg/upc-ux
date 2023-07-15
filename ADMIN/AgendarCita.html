@@ -6,8 +6,6 @@
     <title>Calendario de citas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -20,7 +18,7 @@
       <button id="prev-month" class="close">
         <img src="img/back-arrow.svg" width="18">
       </button>
-      <h2 id="month-year"></h2>
+      <h2 style="margin-top: 10px;" id="month-year"></h2>
       <button id="next-month" class="close">
         <img src="img/forward-arrow.svg" width="18">
       </button>
@@ -44,11 +42,17 @@
 </div>
 
  <!-- Button trigger modal -->
-  <div class="derechabaja">
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Agendar Cita
-  </button>
+
+ <div class="btn-container">
+  <div class="btn-Centro">
+    <a href="MenuAd.html" class="btn btn-atras">Atras</a>
+  </div>
+  <div class="btn-Centro">
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agendar Cita</button>
+  </div>
 </div>
+
+
   
   <!-- Modal -->
   
@@ -150,13 +154,14 @@
       </div>
 
       </div>
+      
     </div>
+
+    
   </div>
 
 
-    <div class="derecha">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Atras</button>
-    </div>
+   
      
 <script src="js/Calendario.js"></script>    
 </body>
