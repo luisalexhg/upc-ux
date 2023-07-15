@@ -96,83 +96,80 @@
     .formEditado {
       width: 150px;
       height: 40px;
-      border: 1px solid rgb(203, 199, 199);      
-      padding: 10px; 
+      border: 1px solid rgb(203, 199, 199);
+      padding: 10px;
       margin-right: 10px;
     }
-    
-    .buscar-button {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: #3bac6a;
-    border-radius: 5px;    
-    font-size: 16px;    
-  }
 
+    .buscar-button {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: #3bac6a;
+      border-radius: 5px;
+      font-size: 16px;
+    }
   </style>
 </head>
 
 <body>
-
-  <body>
-    <div>
+  <section>
+    <div class="container">
       <h1 style="text-align: center; color: #47525E; margin-top: 30px; margin-bottom: 10px;">Gráficos Historicos</h1>
-    </div>
-    <div class="input-group mb-3 chart-container">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          <h6>Desde:</h6>
-        </span>
-      </div>
-      <input required="" maxlength="10" type="date" class="formEditado">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          <h6>Hasta:</h6>
-        </span>
-      </div>
-      <input required="" maxlength="50" type="date" class="formEditado">
-      <button type="button" class="btn buscar-button"><i class="fi fi-bs-search"></i></button>
-    </div>    
-    <div class="chart-container">
-      <div id="piechart" style="width: 1000px; height: 300px; text-align: center;"></div>
-    </div>
-    <br><br>
-    <div class="input-group mb-3 chart-container">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          <h6>Desde:</h6>
-        </span>
-      </div>
-      <input required="" maxlength="10" type="date" class="formEditado">
-      <div class="input-group-prepend">
-        <span class="input-group-text">
-          <h6>Hasta:</h6>
-        </span>
-      </div>
-      <input required="" maxlength="50" type="date" class="formEditado">
-      <button type="button" class="btn buscar-button"><i class="fi fi-bs-search"></i></button>
-    </div>    
-    <div class="chart-container" style="display: flex; flex-direction: column;">
-      <div id="line_top_x"></div>
-      
-      <div class="btn-container">
-        <div class="btn-Centro">
-          <a href="MenuAd.html" class="btn btn-atras">Atras</a>
+      <div class="row">
+        <div class="input-group mb-3 chart-container">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <h6>Desde:</h6>
+            </span>
+          </div>
+          <input required="" maxlength="10" type="date" class="formEditado">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <h6>Hasta:</h6>
+            </span>
+          </div>
+          <input required="" maxlength="50" type="date" class="formEditado">
+          <button type="button" class="btn buscar-button"><i class="fi fi-bs-search"></i></button>
         </div>
-        <div class="btn-Centro">
-          <button type="submit" class="btn btn-secondary btn-block fs-15 fw-600 mt-2 mb-2" style="width: 300px;">Exportar data</button>
+        <div class="chart-container">
+          <div id="piechart" style="width: 1000px; height: 300px; text-align: center;"></div>
+        </div>
+        <br><br>
+        <div class="input-group mb-3 chart-container">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <h6>Desde:</h6>
+            </span>
+          </div>
+          <input required="" maxlength="10" type="date" class="formEditado">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <h6>Hasta:</h6>
+            </span>
+          </div>
+          <input required="" maxlength="50" type="date" class="formEditado">
+          <button type="button" class="btn buscar-button"><i class="fi fi-bs-search"></i></button>
+        </div>
+        <div class="chart-container" style="display: flex; flex-direction: column;">
+          <div id="line_top_x"></div>
+
+          <div class="btn-container">
+            <div class="btn-Centro">
+              <a href="MenuAd.html" class="btn btn-atras">Atras</a>
+            </div>
+            <div class="btn-Centro">
+              <button type="submit" class="btn btn-secondary btn-block fs-15 fw-600 mt-2 mb-2"
+                style="width: 300px;">Exportar data</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>    
-  </body>
-
-  <script type="text/javascript" src="js/login.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-
+    </div>
+</body>
+<script type="text/javascript" src="js/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
